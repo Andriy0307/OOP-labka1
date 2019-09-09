@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1568015418 source:/home/pragramist/Documents/C++/OOP/OOP/main.cpp
+	<iostream>
+	"first_method.h"
+
+1568015418 source:/home/pragramist/Documents/C++/OOP/OOP/first_method.cpp
+	<iostream>
+	"first_method.h"
+
+1568017165 /home/pragramist/Documents/C++/OOP/OOP/first_method.h
+	<vector>
+
