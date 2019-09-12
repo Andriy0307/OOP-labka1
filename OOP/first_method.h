@@ -4,13 +4,14 @@
 
 using namespace std;
 
-class FirstMethod{
+class TwoFirstMethods{
 public:
-    FirstMethod() = default;
-    FirstMethod(const int& m_,const int& a_,const int& c, const int& x0);
-    void random();
+    TwoFirstMethods() = default;
+    TwoFirstMethods(const int& m_,const int& a_,const int& c_, const int& d_ ,const int& x0);
+    void random1();
+    void random2();
     void print();
-    void get(int& m_,int& a_,int& c_, int& x01);
+    void get(int& m_,int& a_,int& c_,int& d_,int& x01);
 private:
     int m;
     int a;
