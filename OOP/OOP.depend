@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1568272916 source:/home/pragramist/Documents/C++/OOP/OOP/main.cpp
+1568373819 source:/home/pragramist/Documents/C++/OOP/OOP/main.cpp
 	<iostream>
 	"generator.h"
 	<vector>
@@ -13,10 +13,11 @@
 1568138846 /home/pragramist/Documents/C++/OOP/OOP/first_method.h
 	<vector>
 
-1568272511 source:/home/pragramist/Documents/C++/OOP/OOP/generator.cpp
+1568373984 source:/home/pragramist/Documents/C++/OOP/OOP/generator.cpp
 	<iostream>
 	"generator.h"
+	<math.h>
 
-1568272436 /home/pragramist/Documents/C++/OOP/OOP/generator.h
+1568367448 /home/pragramist/Documents/C++/OOP/OOP/generator.h
 	<vector>
 

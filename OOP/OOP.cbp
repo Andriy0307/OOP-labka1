@@ -32,10 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Gistagrama.cpp" />
-		<Unit filename="Gistigrama.h" />
-		<Unit filename="first_method.cpp" />
-		<Unit filename="first_method.h" />
+		<Unit filename="generator.cpp" />
+		<Unit filename="generator.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

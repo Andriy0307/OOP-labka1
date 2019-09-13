@@ -3,28 +3,33 @@
 
 #include <vector>
 
-
 using namespace std;
 
 class Generator {
 public:
 	Generator() = default;
-	Generator(const int& m_, const int& a_, const int& c_, const int& d_, const int& x01,const int& xn1_,const int& xn2_);
-	void generate1();
-	void generate2();
-	void generate3();
+	Generator(const int& x01,int m_);
+	double generator1();
+	double generator2();
+	void generator3();
+	void generator4();
+	void generator5();
+	void generator6();
+	void generator7();
+	void generator8();
+	void generator9();
+	void generator10();
+	int reversal_number(long long a, int m);
+	int m = 10000;
+
 	vector<double> number;
 
 	void print();
-	void get(int& m_, int& a_, int& c_, int& d_, int& x01, int& xn1_,int& xn2);
+	void get(int& x01,int m_);
 private:
-	int m;
-	int a;
-	int c;
-	int d;
 	int x0;
-	int xn1;
-	int xn2;
+
+
 
 
 };

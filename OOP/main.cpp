@@ -7,11 +7,13 @@
 
 using namespace std;
 
-void gistograma(vector<double> a, double m) {
+void gistograma(vector<double> a,const int m) {
 	vector <double> u(10, 0);
 	double r = a.size();
+
 	for (int i = 0; i < a.size(); ++i) {
 		double t = a[i] / m;
+
 		if ((t >= 0.0) && (t <= 0.1)) {
 			u[0] += 1.0 / r;
 		}
@@ -42,99 +44,164 @@ void gistograma(vector<double> a, double m) {
 		else if ((t > 0.9) && (t <= 1.0)) {
 			u[9] += 1.0 / r;
 		}
+
 	}
-	for (int i = 0; i < 10; ++i) {
-		cout << "  [0;0.1]:  " << u[i] << endl;
+	for (double i = 0; i < 10; ++i) {
+		cout << "["<<i/10<<";"<<(i+1)/10<<"]"<<":  "<< u[i] << endl;
 	}
 }
 
+
 int main() {
-	cout << "Enter number of method" << endl;
-	int num_method;
-	cin >> num_method;
-	switch (num_method)
+	int method_number;
+    cout << "Enter number of method" << endl;
+	cin >> method_number;
+	switch (method_number)
 	{
 	case 1:
 	{
-		cout << "Enter m" << endl;
-		int m, c, x0, d, a,xn1,xn2;
-		cin >> m;
-		cout << "Enter c" << endl;
-		cin >> c;
-		cout << "Enter a" << endl;
-		cin >> a;
+		int x0;
 		cout << "Enter x0" << endl;
 		cin >> x0;
-		cout << "Enter d" << endl;
-		cin >> d;
-		cout << "Enter xn1" << endl;
-		cin >> xn1;
-		cout << "Enter xn2" << endl;
-		cin >> xn2;
+		int m = 12000;
 
-		Generator generate_1;
-		generate_1.get(m, a, c, d, x0,xn1,xn2);
-		generate_1.generate1();
-		generate_1.print();
+		Generator generator_1;
+		generator_1.get(x0,m);
+		generator_1.generator1();
+		generator_1.print();
 
-		gistograma(generate_1.number, m);
+     	gistograma(generator_1.number, m);
 
 	}
 	break;
 	case 2:
 	{
-		cout << "Enter m" << endl;
-		int m, c, x0, d, a, xn1, xn2;
-		cin >> m;
-		cout << "Enter c" << endl;
-		cin >> c;
-		cout << "Enter a" << endl;
-		cin >> a;
+		int  x0;
 		cout << "Enter x0" << endl;
 		cin >> x0;
-		cout << "Enter d" << endl;
-		cin >> d;
-		cout << "Enter xn1" << endl;
-		cin >> xn1;
-		cout << "Enter xn2" << endl;
-		cin >> xn2;
+		int m = 12000;
 
-		Generator generate_2;
-		generate_2.get(m, a, c, d, x0, xn1, xn2);
-		generate_2.generate1();
-		generate_2.print();
-		gistograma(generate_2.number, m);
+		Generator generator_2;
+		generator_2.get(x0,m);
+		generator_2.generator2();
+		generator_2.print();
+		gistograma(generator_2.number, m);
 
 	}
 	break;
 	case 3:
 	{
-		cout << "Enter m" << endl;
-		int m, c, x0, d, a, xn1, xn2;
-		cin >> m;
-		cout << "Enter c" << endl;
-		cin >> c;
-		cout << "Enter a" << endl;
-		cin >> a;
+		int x0;
 		cout << "Enter x0" << endl;
 		cin >> x0;
-		cout << "Enter d" << endl;
-		cin >> d;
-		cout << "Enter xn1" << endl;
-		cin >> xn1;
-		cout << "Enter xn2" << endl;
-		cin >> xn2;
+		int m = 12000;
 
-		Generator generate_3;
-		generate_3.get(m, a, c, d, x0, xn1, xn2);
-		generate_3.generate1();
-		generate_3.print();
+		Generator generator_3;
+		generator_3.get(x0,m);
+		generator_3.generator3();
+		generator_3.print();
 
-		gistograma(generate_3.number, m);
+		gistograma(generator_3.number, m);
 
 	}
 	break;
-	}
+	case 4:
+	{
+		int m = 12000;
 
+		Generator generator_4;
+		generator_4.generator4();
+		generator_4.print();
+
+		gistograma(generator_4.number, m);
+	}
+	break;
+	case 5:
+	{
+		int m = 12000;
+
+		Generator generator_5;
+		generator_5.generator5();
+		generator_5.print();
+
+		gistograma(generator_5.number, m);
+	}
+	break;
+	case 6:
+	{
+		int x0;
+		cout << "Enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+		Generator generator_6;
+		generator_6.get(x0, m);
+		generator_6.generator6();
+		generator_6.print();
+
+		gistograma(generator_6.number, m);
+	}
+	break;
+	case 7:
+	{
+		int x0;
+		cout << "Enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+		Generator generator_7;
+		generator_7.get(x0, m);
+		generator_7.generator7();
+		generator_7.print();
+
+		gistograma(generator_7.number, m);
+	}
+	break;
+	case 8:
+	{
+		int x0;
+		cout << "Enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+		Generator generator_8;
+		generator_8.get(x0, m);
+		generator_8.generator8();
+		generator_8.print();
+
+		gistograma(generator_8.number, m);
+	}
+	break;
+	case 9:
+	{
+		int x0;
+		cout << "Enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+		Generator generator_9;
+		generator_9.get(x0, m);
+		generator_9.generator9();
+		generator_9.print();
+
+		gistograma(generator_9.number, m);
+	}
+	break;
+	case 10:
+	{
+		int x0;
+		cout << "Enter x0" << endl;
+		cin >> x0;
+		int m = 12000;
+
+		Generator generator_10;
+		generator_10.get(x0, m);
+		generator_10.generator10();
+		generator_10.print();
+
+		gistograma(generator_10.number, m);
+	}
+	break;
+	}
 	return 0;
 }
