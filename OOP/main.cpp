@@ -49,6 +49,13 @@ void gistograma(vector<double> a,const int m) {
 	for (double i = 0; i < 10; ++i) {
 		cout << "["<<i/10<<";"<<(i+1)/10<<"]"<<":  "<< u[i] << endl;
 	}
+
+}
+
+void gistograma1(vector<double> number)
+{
+	for (int i = 0; i < 60; ++i)
+		cout << "[" << to_string(i*0.1 - 3).substr(0, 4) << ", " << to_string((i + 1)*0.1 - 3).substr(0, 4) << "]: " << number[i] * 0.001 << endl;
 }
 
 
@@ -139,7 +146,7 @@ int main() {
 		generator_6.generator6();
 		generator_6.print();
 
-		gistograma(generator_6.number, m);
+		gistograma1(generator_6.number);
 	}
 	break;
 	case 7:
@@ -154,7 +161,7 @@ int main() {
 		generator_7.generator7();
 		generator_7.print();
 
-		gistograma(generator_7.number, m);
+		gistograma1(generator_7.number);
 	}
 	break;
 	case 8:
@@ -169,7 +176,7 @@ int main() {
 		generator_8.generator8();
 		generator_8.print();
 
-		gistograma(generator_8.number, m);
+		gistograma1(generator_8.number);
 	}
 	break;
 	case 9:

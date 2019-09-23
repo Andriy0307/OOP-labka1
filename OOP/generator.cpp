@@ -29,11 +29,11 @@ int Generator::reversal_number(long long a,int m) {
 }
 
 double Generator::generator1() {
-	int a = 1541;
-	int c = 2957;
+	int a = 11;
+	int c = 257;
 
 	double t;
-	for (int i = 1; i < 100; ++i) {
+	for (int i = 1; i < 10000; ++i) {
 		t = (a*x0 + c) % m;
 		number.push_back(t);
 		x0 = t;
@@ -47,7 +47,7 @@ double Generator::generator2() {
 	int c = 61;
 	int d = 32;
 	double t;
-	for (int i = 1; i < 100; ++i) {
+	for (int i = 1; i < 10000; ++i) {
 		t = (d*x0*x0 + a * x0 + c) % m;
 		number.push_back(t);
 		x0 = t;
@@ -58,7 +58,7 @@ double Generator::generator2() {
 void Generator::generator3() {
 
 	int xn1 = 2; int xn2 = 3;
-	for (int i = 1; i < 100; ++i) {
+	for (int i = 1; i < 10000; ++i) {
 		x0 = (xn1 + xn2) % m;
 		number.push_back(x0);
 		xn1 = xn2;
@@ -103,7 +103,7 @@ void Generator::generator6() {
 	int t;
 	double sum = 0, u = 0;
 	for (int j = 0; j < 12; j++)
-		sum += generator1() / m;
+		sum += generator1();
 	t = sum - 6;
 	number.push_back(t);
 	x0 = t;
